@@ -1,0 +1,13 @@
+﻿<ion-view title="Eta Details">
+    
+    <ionic-pane ng-controller="TodoListController">
+        <ion-header-bar align-title="center" class="bar-positive">
+        </ion-header-bar>
+        <ion-content padding="true" class="has-header">
+            <h3 class="title">{{DriverId}}, {{DriverName}}</h3>
+            <div class="list list-inset" ng-repeat="item in etaDetails">
+                <a href="#" class="item">{{item.CITY}}</a>
+            </div>
+        </ion-content>
+        </ionic-pane>
+</ion-view>
