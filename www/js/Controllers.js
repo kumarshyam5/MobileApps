@@ -15,6 +15,36 @@ angular.module('starter.Controllers', [])
     }, {
         ETD: 'Next ETD',
         Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
+    }, {
+        ETD: 'Next ETD',
+        Date: '10/25/2015 18:00'
     }]
 
     $scope.etaDetails = [{
