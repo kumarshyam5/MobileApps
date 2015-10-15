@@ -1,11 +1,8 @@
 <ion-view view-title="ETD List" >
     
-        <!--<ion-header-bar align-title="center" class="bar-positive">
-        </ion-header-bar>-->
-   
         <ion-content >
             <h3 class="title">{{DriverId}}, {{DriverName}}</h3>
-            <div class="list list-inset" ng-repeat="item in EtaList">
+            <div class="list" ng-repeat="item in EtaList">
                 <a href="#/app/eta" class="item">{{item.ETD}} : {{item.Date}}</a>
             </div>
         </ion-content>
