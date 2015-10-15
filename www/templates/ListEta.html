@@ -1,13 +1,13 @@
-﻿<ion-view title="Home">
-    <h3>test</h3>
-    <ionic-pane ng-controller="TodoListController">
-        <ion-header-bar align-title="center" class="bar-positive">
-        </ion-header-bar>
-        <ion-content padding="true" class="has-header">
+<ion-view view-title="ETD List" >
+    
+        <!--<ion-header-bar align-title="center" class="bar-positive">
+        </ion-header-bar>-->
+   
+        <ion-content >
             <h3 class="title">{{DriverId}}, {{DriverName}}</h3>
-            <div class="list list-inset" ng-repeat="item in TodoList">
+            <div class="list list-inset" ng-repeat="item in EtaList">
                 <a href="#/eta" class="item">{{item.ETD}} : {{item.Date}}</a>
             </div>
         </ion-content>
-        </ionic-pane>
+    
 </ion-view>

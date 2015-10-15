@@ -1,11 +1,12 @@
-﻿
+
 angular.module('starter.Controllers', [])
-.controller('TodoListController', function ($scope) {
+
+.controller('EtaListController', function ($scope) {
 
     $scope.DriverName = "John Smith";
     $scope.DriverId = 3456;
 
-    $scope.TodoList = [{
+    $scope.EtaList = [{
         ETD: 'Current ETD',
         Date: '10/24/2015 14:00'
     }, {
@@ -22,4 +23,6 @@ angular.module('starter.Controllers', [])
     {
         CITY:'BLA'
     }]
+})
+.controller('EtaListController',function($scope,$stateParams){
 });
