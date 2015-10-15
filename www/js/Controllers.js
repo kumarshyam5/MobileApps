@@ -24,5 +24,5 @@ angular.module('starter.Controllers', [])
         CITY:'BLA'
     }]
 })
-.controller('EtaListController',function($scope,$stateParams){
+.controller('NavController',function($scope,$stateParams){
 });

@@ -8,10 +8,14 @@ angular.module("starter.routes", [])
         templateUrl: 'templates/menu.html',
         controller: 'EtaListController'
     })
-    .state('eta', {
+    .state('app.eta', {
         url: '/eta',
-        templateUrl: 'templates/etadetails.html',
-        controller: 'EtaListController'
+        views: {
+            'menuContent':{
+                templateUrl: 'templates/etadetails.html',
+                controller: 'EtaListController'
+            }
+        }
     })
     .state('app.etalists',{
         url: '/etalists',
@@ -21,8 +25,17 @@ angular.module("starter.routes", [])
                 controller: 'EtaListController'
             }
         }
+    })
+    .state('app.home',{
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/home.html',
+                controller: 'EtaListController'
+            }
+        }
     });
 
-    $urlRouterProvider.otherwise('/app/etalists');
+    $urlRouterProvider.otherwise('/app/home');
 });
 
