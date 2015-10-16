@@ -6,7 +6,7 @@ angular.module("starter.routes", [])
         url: '/app',
         abstract: true,
         templateUrl: 'templates/menu.html',
-        controller: 'EtaListController'
+        controller: 'HomeController'
     })
     .state('app.eta', {
         url: '/eta/:etaid',
@@ -22,7 +22,7 @@ angular.module("starter.routes", [])
         views: {
             'menuContent': {
                 templateUrl: 'templates/ListEta.html',
-                controller: '1EtaListController'
+                controller: 'EtaListController'
             }
         }
     })

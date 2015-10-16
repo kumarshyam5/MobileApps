@@ -1,7 +1,7 @@
 
 angular.module('starter.Controllers', [])
 
-.controller('EtaListController', function ($scope) {
+.controller('HomeController', function ($scope) {
 
     $scope.DriverName = "John Smith";
     $scope.DriverId = 3456;
