@@ -2,7 +2,15 @@
 angular.module('starter.ServiceFactory', [])
 .factory('etaServices',['$http',function($http){
     
-    var baseUrl = 'js/data';
+    var baseUrl = '';
+    
+    //TODO should be remove once itegrated to service
+    if(ionic.Platform.isAndroid()){
+        baseUrl = 'android/www/js/data';
+    }else{
+        baseUrl = 'js/data';
+    }
+    
     var etalist = '/etalist.json';
     var etaServices = {};
     
