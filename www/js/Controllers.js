@@ -6,7 +6,7 @@ angular.module('starter.Controllers', [])
     $scope.DriverName = "John Smith";
     $scope.DriverId = 3456;
 
-    $scope.EtaList = [{
+   /* $scope.EtaList = [{
         ETD: 'Current ETD',
         Date: '10/24/2015 14:00'
     }, {
@@ -61,7 +61,7 @@ angular.module('starter.Controllers', [])
         tripId:'63455432',
         location:'STORE 1, Rogers',
         eta:'10/25/2015 19:00'
-    }]
+    }]*/
 })
 .controller('NavController',function($scope,$stateParams){
 });

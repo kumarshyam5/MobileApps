@@ -1,33 +1,25 @@
-use 'strict';
-angular.module('starter.Factory',[])
+
+angular.module('starter.ServiceFactory',[])
 .factory('etaServices',['$http',function($http){
     
-    var baseUrl = '/test/api';
-    var etaServiceFactory = {};
+    var baseUrl = 'js/data';
+    var etalist = '/etalist.json';
+    var etaServices = {};
     
     //return me the list of etas
-     etaServiceFactory.getEtaList = function(){
-        return $http.get(baseUrl);
+     etaServices.getEtaList = function(){
+        return $http.get(baseUrl+etalist);
     };
     
     //return me a single eta
-    etaServiceFactory.getEta = function(id){
+    etaServices.getEta = function(id){
         return $http.get(baseUrl+'/'+id);
     };
     
     //update an eta
-    etaServiceFactory.updateEta = function(eta){
+    etaServices.updateEta = function(eta){
         return $http.put(baseUrl+'/'+eta.id,eta);
     };
     
-    return etaServiceFactory;
-}])
-.factory('tripServices',['$http',function($http){
-    var baseUrl = '/trip/api';
-    var tripServiceFactory = {};
-    
-    tripServiceFactory.getTrip = function(tripid){
-        return $http.get(baseUrl+'/'+tripid);
-    };
-    return tripServiceFactory;
+    return etaServices;
 }]);
