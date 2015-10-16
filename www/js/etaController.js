@@ -1,5 +1,5 @@
 angular.module('starter.etacontroller',[])
-.controller('EtaController',['$scope','etaServices',
+.controller('1EtaListController',['$scope','etaServices',
                             function($scope,$etaServices){
                                 $etaServices.getEtaList()
                                 .success(function(etalist){
@@ -8,9 +8,11 @@ angular.module('starter.etacontroller',[])
                                 .error(function(error){
                                     $scope.status = 'Failed'+error.message;
                                     //alert($scope.status);
-                                });
-                                
-                        $scope.getEta = function(){       
+                                })}])
+                         //function to get the eta details       
+.controller('EtaDetailController',['$scope','$etaServices',
+                          function($scope, $etaServices){
+                                       
                             $etaServices.getEta($scope.etaid)
                                 .success(function(etaDetails){
                                          $scope.etaDetails=etaDetails;
@@ -18,6 +20,4 @@ angular.module('starter.etacontroller',[])
                                 .error(function(error){
                                        $scope.status = 'Failed '+error.message;
                                        });
-                            };
-                            
                             }]);
