@@ -6,7 +6,7 @@ angular.module('starter.ServiceFactory', [])
     
     //TODO should be remove once itegrated to service
     if(ionic.Platform.isAndroid()){
-        baseUrl = 'android/www/js/data';
+        baseUrl = './js/data';
     }else{
         baseUrl = 'js/data';
     }
