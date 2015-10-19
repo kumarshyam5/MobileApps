@@ -12,7 +12,7 @@ angular.module("starter.routes", [])
         url: '/eta/:etaid',
         views: {
             'menuContent':{
-                templateUrl: 'templates/etadetails.html',
+                templateUrl: 'templates/eta/etadetails.html',
                 controller: 'EtaDetailController'
             }
         }
@@ -21,7 +21,7 @@ angular.module("starter.routes", [])
         url: '/etalists',
         views: {
             'menuContent': {
-                templateUrl: 'templates/ListEta.html',
+                templateUrl: 'templates/eta/ListEta.html',
                 controller: 'EtaListController'
             }
         }
