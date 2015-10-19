@@ -28,7 +28,7 @@ angular.module('starter.ServiceFactory', [])
     etaServices.getEta = function(id){
         if(id!='undefined')
             alert(id);
-        return $http.get(baseUrl + '/drivereta/'+driverID);
+        return $http.get(baseUrl + '/eta/'+id);
     };
     
     //update an eta
