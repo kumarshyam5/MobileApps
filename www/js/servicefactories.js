@@ -2,28 +2,33 @@
 angular.module('starter.ServiceFactory', [])
 .factory('etaServices',['$http',function($http){
     
-    var baseUrl = '';
+    var baseUrl = 'http://driverdetailsdemoservice.cloudapp.net/DriverETADetails.svc';
     
-    //TODO should be remove once itegrated to service
+    var driverID;
+    ////TODO should be remove once itegrated to service
     if(ionic.Platform.isAndroid()){
-        baseUrl = './js/data';
+        driverID = '3456';
     }else{
-        baseUrl = 'js/data';
+        driverID = '8756';
     }
     
-    var etalist = '/etalist.json';
+    
     var etaServices = {};
     
     //return me the list of etas
-     etaServices.getEtaList = function(){
-        return $http.get(baseUrl + etalist);
+    etaServices.getEtaList = function () {       
+        return $http.get(baseUrl + '/drivereta/'+driverID);       
+    };
+
+    etaServices.gerDriver = function () {
+        return $http.get(baseUrl + '/driver/' + driverID);                
     };
     
     //return me a single eta
     etaServices.getEta = function(id){
         if(id!='undefined')
             alert(id);
-        return $http.get(baseUrl + '/' + id);
+        return $http.get(baseUrl + '/drivereta/'+driverID);
     };
     
     //update an eta

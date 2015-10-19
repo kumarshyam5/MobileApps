@@ -1,10 +1,15 @@
 
 angular.module('starter.Controllers', [])
 
-.controller('HomeController', function ($scope) {
+.controller('HomeController',  ['$scope', 'etaServices', function ($scope, $etaServices) {
+        
+    $etaServices.gerDriver()
+     .success(function (etalist) {
+         $scope.driver = etalist;
+     })
+     .error(function (error) {
+     });
+}])
 
-    $scope.DriverName = "John Smith";
-    $scope.DriverId = 3456;
-})
 .controller('NavController',function($scope,$stateParams){
 });
