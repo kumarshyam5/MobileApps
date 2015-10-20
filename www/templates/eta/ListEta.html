@@ -4,15 +4,13 @@
             <h3 class="title">{{driver.driver_id}}, {{driver.driver_name}}</h3>
             
             <div class="list">
-                <ion-list>
-                    <ion-item ng-repeat="item in etaList">
-                        <a class="item item-avatar" ui-sref="app.eta">
+                
+                        <a class="item item-avatar" ui-sref="app.eta" ng-repeat="item in etaList">
                             <img ng-src="{{item.imgSrc}}" />
                             <h2>Trip Id: {{item.trip_id}}</h2>
                             <p>Date: {{item.Etd_Date}}</p>
                         </a>
-                    </ion-item>
-                </ion-list>
+                    
             </div>
         </ion-content>
     
