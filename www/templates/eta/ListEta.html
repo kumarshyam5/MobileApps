@@ -3,10 +3,16 @@
         <ion-content padding="true">
             <h3 class="title">{{driver.driver_id}}, {{driver.driver_name}}</h3>
             
-            <div class="list" >
-            <div ng-repeat="item in EtaList">
-                <div ui-sref="app.eta"class="item">Next ETA : {{item.Etd_Date}}</div>
-            </div>
+            <div class="list">
+                <ion-list>
+                    <ion-item ng-repeat="item in etaList">
+                        <a class="item item-avatar">
+                            <img src="{{item.imgSrc}}" />
+                            <h2>Trip Id: {{item.trip_id}}</h2>
+                            <p>Date: {{item.Etd_Date}}</p>
+                        </a>
+                    </ion-item>
+                </ion-list>
             </div>
         </ion-content>
     
