@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'starter.Controllers', 'starter.routes','starter.ServiceFactory','etacontrollers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope,$ionicLoading) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -16,4 +16,27 @@ angular.module('starter', ['ionic', 'starter.Controllers', 'starter.routes','sta
       StatusBar.styleDefault();
     }
   });
+    $rootScope.$on('loading:show',function(){
+        $ionicLoading.show({
+            template:'<p>Loading...</p><ion-spinner></ion-spinner>'
+        })
+    })
+    $rootScope.$on('loading:hide',function(){
+        $ionicLoading.hide()
+    })
+})
+
+.config(function($httpProvider){
+    $httpProvider.interceptors.push(function($rootScope){
+        return{
+            request: function(config){
+                $rootScope.$broadcast('loading:show')
+                return config
+            },
+            response: function(response){
+                $rootScope.$broadcast('loading:hide')
+                return response
+            }
+        }
+    })
 })
