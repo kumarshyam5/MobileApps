@@ -1,4 +1,3 @@
-
 angular.module('etacontrollers')
 .controller('EtaDetailController', ['$scope', 'etaServices', function ($scope, $etaServices) {
 

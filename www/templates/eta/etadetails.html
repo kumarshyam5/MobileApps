@@ -4,14 +4,25 @@
         <ion-header-bar align-title="center" class="bar-positive">
         </ion-header-bar>
         <ion-content padding="true" class="has-header">           
-            
-            <div class="" ng-repeat="item in etaDetails">
-                <div class="card">
-                    <div class="item item-divider">{{item.tripId}}</div>
-                    <div class="item ite-text-wrap">{{item.location}}</div>
-                    <div class="item item-divider">{{item.eta}}</div>
-                </div>
-            </div>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Trip Id</span>
+                    <input type="text" readonly="readonly" placeholder="{{etaDetails.trip_id}}" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Origin</span>
+                    <input type="text" readonly="readonly" placeholder="{{etaDetails.Origin}}" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Destination</span>
+                    <input type="text" readonly="readonly" placeholder="{{etaDetails.destination}}" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">ETD Date</span>
+                    <input type="date"   value="{{etaDetails.Etd_Date}}" required />
+                </label>
+                <button class="button button-full button-positive">Save</button>
+            </div>           
         </ion-content>
         </ionic-pane>
 </ion-view>
