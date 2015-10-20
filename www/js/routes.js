@@ -41,6 +41,6 @@ angular.module("starter.routes", [])
         controller:'HomeController'
     });
 
-    $urlRouterProvider.otherwise('app.home');
+    $urlRouterProvider.otherwise('app/home');
 });
 
