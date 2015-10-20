@@ -27,7 +27,7 @@ angular.module('starter.Controllers', [])
     $etaServices.gerDriver()
      .then(function successCallback(response) {
          $scope.driver = response.data;
-        console.log(driver);
+        console.log($scope.driver);
      },function errorCallback(error){
         alert(error.status+' : '+error.statusText);
         console.log($scope.driver);
