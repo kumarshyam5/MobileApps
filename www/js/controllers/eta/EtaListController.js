@@ -6,5 +6,6 @@ angular.module('etacontrollers')
         $scope.EtaList = etalist;
     })
     .error(function (error) {
+        alert(error.message);
     });
 }]);

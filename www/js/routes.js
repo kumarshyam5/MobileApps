@@ -34,8 +34,13 @@ angular.module("starter.routes", [])
                 controller: 'EtaListController'
             }
         }
+    })
+    .state('unauthorized',{
+        url: '/landing',
+        templateUrl:'templates/landing-page.html',
+        controller:'HomeController'
     });
 
-    $urlRouterProvider.otherwise('/app/home');
+    $urlRouterProvider.otherwise('app.home');
 });
 
