@@ -1,7 +1,7 @@
 
 angular.module('starter.Controllers', [])
 
-.controller('HomeController',  ['$scope', '$ionicPopup','$state','$rootScope', function ($scope, $ionicPopup,$state,$rootScope) {
+.controller('HomeController',  ['$scope', 'etaServices','$ionicPopup','$state','$rootScope', function ($scope, $etaServices,$ionicPopup,$state,$rootScope) {
         
 //   var myPopup= $ionicPopup.show({
 //        template:'<div class="list"><label class="item item-input item-select"><div class="input-label">Driver ID</div><select ng-model="selected_driver"><option value="1">3456</option><option>8756</option><option>87562</option></select></label></div>',
@@ -24,12 +24,12 @@ angular.module('starter.Controllers', [])
 //            $state.go('unauthorized');
 //        }
 //    });
-//    $etaServices.gerDriver()
-//     .success(function (etalist) {
-//         $scope.driver = etalist;
-//     })
-//     .error(function (error) {
-//     });
+    $etaServices.gerDriver()
+     .success(function (etalist) {
+         $scope.driver = etalist;
+     })
+     .error(function (error) {
+     });
 }])
 
 .controller('NavController',function($scope,$stateParams){
