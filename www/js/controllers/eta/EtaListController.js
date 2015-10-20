@@ -2,10 +2,10 @@ angular.module('etacontrollers')
 .controller('EtaListController', ['$scope', 'etaServices', function ($scope, $etaServices) {
 
     $etaServices.getEtaList()
-    .success(function (etalist) {
+    .then(function successCallback(response) {
         $scope.etaList=[];
-        console.log(etalist);
-        angular.forEach(etalist, function(value, index) {
+        console.log(response.data);
+        angular.forEach(response.data, function(value, index) {
             if(index==0)
                 value["imgSrc"]="img/current.png";
             else
@@ -15,8 +15,8 @@ angular.module('etacontrollers')
 
         console.log($scope.etaList);
         
-    })
-    .error(function (error) {
-        alert(error.message);
+    },
+          function errorCallback( error) {
+        alert(error.status);
     });
 }]);

@@ -1,5 +1,6 @@
 <ion-view view-title="Home">
     <ion-content padding="true">
+        <div class="col" ng-if="driver!='undefined'"><h3>Welcome, {{driver.driver_name}} ({{driver.driver_id}})</h3></div>
         <div class="row">
             <div class="col">               
                 <a class="button button-block button-outline button-calm padding-top" ui-sref="app.etalists">                    

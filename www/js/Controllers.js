@@ -25,11 +25,13 @@ angular.module('starter.Controllers', [])
 //        }
 //    });
     $etaServices.gerDriver()
-     .success(function (etalist) {
-         $scope.driver = etalist;
-     })
-     .error(function (error) {
-     });
+     .then(function successCallback(response) {
+         $scope.driver = response.data;
+        console.log(driver);
+     },function errorCallback(error){
+        alert(error.status+' : '+error.statusText);
+        console.log($scope.driver);
+    });
 }])
 
 .controller('NavController',function($scope,$stateParams){

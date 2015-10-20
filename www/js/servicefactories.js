@@ -17,11 +17,19 @@ angular.module('starter.ServiceFactory', [])
     
     //return me the list of etas
     etaServices.getEtaList = function () {       
-        return $http.get(baseUrl + '/drivereta/'+driverID);       
+//        return $http.get(baseUrl + '/drivereta/'+driverID);  
+        return $http({
+            url : baseUrl+'/drivereta/'+driverID,
+            method: 'GET'
+        });
     };
 
     etaServices.gerDriver = function () {
-        return $http.get(baseUrl + '/driver/' + driverID);                
+//        return $http.get(baseUrl + '/driver/' + driverID);   
+        return $http({
+            url: baseUrl+'/driver/'+driverID,
+            method:'GET'
+        });
     };
     
     //return me a single eta
