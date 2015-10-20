@@ -9,7 +9,7 @@ angular.module("starter.routes", [])
         controller: 'HomeController'
     })
     .state('app.eta', {
-        url: '/eta',
+        url: '/eta/:Etd_id',
         views: {
             'menuContent':{
                 templateUrl: 'templates/eta/etadetails.html',

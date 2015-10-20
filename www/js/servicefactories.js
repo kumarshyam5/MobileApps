@@ -25,9 +25,9 @@ angular.module('starter.ServiceFactory', [])
     };
     
     //return me a single eta
-    etaServices.getEta = function () {
-        console.log(baseUrl + '/eta/' + 1);
-        return $http.get(baseUrl + '/eta/'+1);
+    etaServices.getEta = function (id) {
+        alert(id);
+        return $http.get(baseUrl + '/eta/' + id);
     };
     
     //update an eta
