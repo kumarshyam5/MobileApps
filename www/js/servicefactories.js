@@ -33,8 +33,7 @@ angular.module('starter.ServiceFactory', [])
     };
     
     //return me a single eta
-    etaServices.getEta = function (id) {
-        alert(id);
+    etaServices.getEta = function (id) {       
         return $http.get(baseUrl + '/eta/' + id);
     };
     
