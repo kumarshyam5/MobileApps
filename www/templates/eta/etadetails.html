@@ -1,28 +1,39 @@
 <ion-view title="Eta Details">
-    
-    <ionic-pane padding="true">
-        <ion-header-bar align-title="center" class="bar-positive">
-        </ion-header-bar>
-        <ion-content padding="true" class="has-header">           
-            <div class="list">
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Trip Id</span>
-                    <input type="text" readonly="readonly" placeholder="{{etaDetails.trip_id}}" />
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Origin</span>
-                    <input type="text" readonly="readonly" placeholder="{{etaDetails.Origin}}" />
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">Destination</span>
-                    <input type="text" readonly="readonly" placeholder="{{etaDetails.destination}}" />
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="input-label">ETD Date</span>
-                    <input type="text" value="{{etaDetails.Etddate}}" required />
-                </label>
-                <button class="button button-full button-positive">Save</button>
-            </div>           
-        </ion-content>
-        </ionic-pane>
+
+
+    <ion-content padding="true" class="has-header">
+        <div class="card">
+            <div class="item item-divider item-energized">
+                Trip Id
+            </div>
+            <div class="item item-divider">
+                {{etaDetails.trip_id}}
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider item-energized">
+                Origin
+            </div>
+            <div class="item item-divider">
+                {{etaDetails.Origin}}
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider item-energized">
+                Destination
+            </div>
+            <div class="item item-divider">
+                {{etaDetails.destination}}
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider item-energized">
+                ETD Date
+            </div>
+            <div class="item item-divider">
+                {{etaDetails.Etddate}}
+            </div>
+        </div>
+    </ion-content>
+
 </ion-view>
