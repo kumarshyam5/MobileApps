@@ -34,13 +34,18 @@ angular.module('starter.ServiceFactory', [])
     
     //return me a single eta
     etaServices.getEta = function (id) {       
-        return $http.get(baseUrl + '/eta/' + id);
-    };
+        return $http.get(baseUrl + '/eta/' + id)
+        .then(function (response) {
+            return response.data;
+        })};
     
     //update an eta
     etaServices.updateEta = function(eta){
-        return $http.put(baseUrl + '/' + eta.id,eta);
-    };
+        return $http.put(baseUrl + '/' + eta)
+        .then(function(response)
+        {
+            return response.data;
+        })};
     
     return etaServices;
 }]);
