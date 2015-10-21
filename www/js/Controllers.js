@@ -1,7 +1,8 @@
 
 angular.module('starter.Controllers', [])
 
-.controller('HomeController',  ['$scope', 'etaServices','$ionicPopup','$state','$rootScope', function ($scope, $etaServices,$ionicPopup,$state,$rootScope) {
+.controller('HomeController', ['$scope', 'etaServices', '$ionicPopup', '$state', '$rootScope',
+    function ($scope, $etaServices, $ionicPopup, $state, $rootScope) {
         
 //   var myPopup= $ionicPopup.show({
 //        template:'<div class="list"><label class="item item-input item-select"><div class="input-label">Driver ID</div><select ng-model="selected_driver"><option value="1">3456</option><option>8756</option><option>87562</option></select></label></div>',

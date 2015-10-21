@@ -9,11 +9,12 @@ angular.module("starter.routes", [])
         controller: 'HomeController'
     })
     .state('app.eta', {
-        url: '/eta/:Etd_id',
+        url: '/eta/{id}',
         views: {
             'menuContent':{
                 templateUrl: 'templates/eta/etadetails.html',
                 controller: 'EtaDetailController'
+
             }
         }
     })

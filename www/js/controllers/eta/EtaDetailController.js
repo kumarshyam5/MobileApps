@@ -1,8 +1,7 @@
 angular.module('etacontrollers')
-.controller('EtaDetailController', ['$scope', 'etaServices', function ($scope, $etaServices) {
-
-    alert($scope.Etd_id);
-    $etaServices.getEta($scope.Etd_id)
+.controller('EtaDetailController', ['$scope', 'etaServices', '$stateParams', function ($scope, $etaServices, $stateParams) {
+    var etaId = $stateParams.id;
+    $etaServices.getEta(etaId)
     .success(function (etaDetails) {
         $scope.etaDetails = etaDetails;
     })
