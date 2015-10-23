@@ -2,10 +2,7 @@
 angular.module('starter.ServiceFactory', [])
 .factory('etaServices', ['$http', function ($http) {
 
-    //var baseUrl = 'http://driverdetailsdemoservice.cloudapp.net/DriverETADetails.svc';
-    
-
-    var baseUrl= 'http://localhost:58841/DriverETADetails.svc';
+    var baseUrl = 'http://driverdetailsdemoservice.cloudapp.net/DriverETADetails.svc';  
 
     var driverID;
     ////TODO should be remove once itegrated to service
