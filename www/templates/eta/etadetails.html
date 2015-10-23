@@ -31,10 +31,10 @@
                 ETD Date
             </div>
             <div class="item item-divider">
-                {{etaDetails.Etddate}}
+               <input type="text" value="{{etaDetails.Etddate}}" />
             </div>
         </div>
-        <button class="button icon-left ion-ios-calendar-outline item-avatar">Save</button>
+        <button class="button icon-left ion-ios-calendar-outline item-avatar" ng-click="updateEta(etaDetails)">Save</button>
     </ion-content>
 
 </ion-view>
