@@ -2,14 +2,16 @@
 angular.module('starter.ServiceFactory', [])
 .factory('etaServices', ['$http', function ($http) {
 
-    var baseUrl = 'http://driverdetailsdemoservice.cloudapp.net/DriverETADetails.svc';  
+    // var baseUrl = 'http://driverpoc.cloudapp.net/DriverETADetails.svc';
+
+    var baseUrl = 'http://localhost:58841/DriverETADetails.svc';
 
     var driverID;
     ////TODO should be remove once itegrated to service
     if (ionic.Platform.isAndroid()) {
         driverID = '3456';
     } else {
-        driverID = '8756';
+        driverID = '2343';
     }
 
 
