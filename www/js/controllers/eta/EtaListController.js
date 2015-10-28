@@ -17,6 +17,6 @@ angular.module('etacontrollers')
         
     },
           function errorCallback( error) {
-        alert(error.status);
+       // alert(error.status);
     });
 }]);

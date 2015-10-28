@@ -30,7 +30,7 @@ angular.module('starter.Controllers', [])
          $scope.driver = response.data;
         console.log($scope.driver);
      },function errorCallback(error){
-        alert(error.status+' : '+error.statusText);
+       // alert(error.status+' : '+error.statusText);
         console.log($scope.driver);
     });
 }])
