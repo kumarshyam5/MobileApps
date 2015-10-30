@@ -33,7 +33,8 @@ angular.module('starter.Controllers', [])
        // alert(error.status+' : '+error.statusText);
         console.log($scope.driver);
     });
-}])
+}]);
 
-.controller('NavController',function($scope,$stateParams){
-});
+//.controller('NavController',function($scope,$stateParams){
+//    console.warn($stateParams);
+//});
