@@ -7,24 +7,26 @@
             <div class="item item-divider item-calm">
                 Trip Information
             </div>
-            <div class="item item-divider">
-                <h2>Trip Id</h2> 
-                <p>{{etaDetails.trip_id}}</p>
-            </div>
-            <div class="item item-divider">
+-->
+        <div class="list card">
+            <li class="item">
+                <h2>Trip Id</h2> {{etaDetails.trip_id}}
+            </li>
+            <li class="item">
                 <h2>Origin</h2> 
                 <p>{{etaDetails.Origin}}</p>
-            </div>
-            <div class="item item-divider">
+            </li>
+            <li class="item">
                 <h2>Destination</h2> 
                 <p>{{etaDetails.destination}}</p>
-            </div>
-            <div class="item item-divider">
+            </li>
+            <li class="item">
                 <h2>ETD</h2> 
                 <p><input ng-model="etaDetails.Etddate" /></p>                         
-            </div>
+            </li>
         </div>
--->
+<!--        </div>-->
+<!--
         <div class="card">
             <div class="item item-divider item-positive">
                 Trip Id
@@ -57,6 +59,7 @@
                <input ng-model="etaDetails.Etddate" />
             </div>
         </div>
+-->
         <button class="button button-block button-positive" ng-click="updateEta(etaDetails)">Save</button>
     </ion-content>
 

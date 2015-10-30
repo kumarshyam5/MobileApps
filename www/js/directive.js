@@ -4,7 +4,7 @@ angular.module('starter.directive',[])
         restrict:'E',
         replace: true,
         scope:true,
-        template:"<button class='button button-clear' ng-click='updateEta(etaDetails)' ng-if='etaupdate'>Save</button>",
+        template:"<button class='button button-clear' ng-click='updateEta(etaDetails)'>Save</button>",
         compile: function(element,attrs){
             var text = ionic.Platform.isIOS()?'Done':'Save';
 //            alert(text);

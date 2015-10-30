@@ -22,7 +22,7 @@ angular.module('etacontrollers')
         $scope.status = 'Failed ' + error.status;
     };
     $scope.updateEta = function (etaDetails) {
-        
+        alert(etaDetails.Etddate);
         $etaServices.updateEta(etaDetails)
          .then(OnUpdatecompleted, OnUpdateFailure);
     };
