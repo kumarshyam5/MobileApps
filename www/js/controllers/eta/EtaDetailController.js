@@ -1,5 +1,5 @@
 angular.module('etacontrollers')
-.controller('EtaDetailController', ['$scope', 'etaServices', '$stateParams', function ($scope, $etaServices, $stateParams) {
+.controller('EtaDetailController', ['$scope', 'etaServices', '$stateParams','$state', function ($scope, $etaServices, $stateParams,$state) {
 
     var etaId = $stateParams.id;
 
@@ -24,7 +24,7 @@ angular.module('etacontrollers')
 
 
     var OnUpdatecompleted = function (response) {
-
+        $state.go('app.etalists');
     };
 
     var OnUpdateFailure = function (error) {

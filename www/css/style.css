@@ -1,1 +1,5 @@
 /* Empty. Add your own CSS if you like */
+.platform-ios .ion-header-bar bar-positive{
+    background-color: none;
+    color: black;
+}
