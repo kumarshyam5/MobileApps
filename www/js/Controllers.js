@@ -51,5 +51,13 @@ angular.module('starter.Controllers', [])
         return $scope.shownGroup === group;
     }; 
 
+})
+.controller('SummaryController', function ($scope) {
+
+
+})
+.controller('AboutController', function ($scope) {
+
+
 });
 

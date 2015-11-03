@@ -1,7 +1,7 @@
 angular.module("starter.routes", [])
-.config(function ($stateProvider,$urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider) {
     //alert($stateProvider);
-    
+
     $stateProvider.state('app', {
         url: '/app',
         abstract: true,
@@ -11,14 +11,14 @@ angular.module("starter.routes", [])
     .state('app.eta', {
         url: '/eta/{id}',
         views: {
-            'menuContent':{
+            'menuContent': {
                 templateUrl: 'templates/eta/etadetails.html',
                 controller: 'EtaDetailController'
 
             }
         }
     })
-    .state('app.etalists',{
+    .state('app.etalists', {
         url: '/etalists',
         views: {
             'menuContent': {
@@ -27,7 +27,7 @@ angular.module("starter.routes", [])
             }
         }
     })
-    .state('app.home',{
+    .state('app.home', {
         url: '/home',
         views: {
             'menuContent': {
@@ -37,18 +37,38 @@ angular.module("starter.routes", [])
         }
     })
     .state('app.tripsheet', {
-             url: '/tripsheet',
+        url: '/tripsheet',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/tripsheet.html',
+                controller: 'TripsheetController'
+            }
+        }
+    })
+         .state('app.summary', {
+             url: '/Summary',
              views: {
                  'menuContent': {
-                     templateUrl: 'templates/tripsheet.html',
-                     controller: 'TripsheetController'
+                     templateUrl: 'templates/Summary/Summary.html',
+                     controller: 'SummaryController'
                  }
              }
          })
-    .state('unauthorized',{
+
+         .state('app.about', {
+             url: '/About',
+             views: {
+                 'menuContent': {
+                     templateUrl: 'templates/About/About.html',
+                     controller: 'AboutController'
+                 }
+             }
+         })
+
+    .state('unauthorized', {
         url: '/landing',
-        templateUrl:'templates/landing-page.html',
-        controller:'HomeController'
+        templateUrl: 'templates/landing-page.html',
+        controller: 'HomeController'
     });
 
     $urlRouterProvider.otherwise('app/home');
