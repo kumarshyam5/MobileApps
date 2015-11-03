@@ -1,0 +1,38 @@
+﻿<ion-view title="Trip Details">
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <a ng-class="IsOneHidden? 'button icon-left ion-plus button-block button-calm':'button icon-left ion-minus button-block button-calm'" ng-click="ShowHide('One')">
+            <b>Details</b>
+            </a>
+            <div ng-hide="IsOneHidden">
+                <div class="row">
+                    <div class="col col-50">
+                        <b>Trip: </b>59717889
+                    </div>
+                    <div class="col col-50"><b>Trailor: </b></div>
+                    </div>
+                <div class="row">
+                    <div class="col">
+                        <b>Must Depart Time: </b>02-29-2012 04:00 CT
+                    </div>
+                </div>
+            </div>            
+        </ion-list>
+        <ion-list>
+            <div ng-repeat="group in groups">
+                <ion-item class="item-stable"
+                          ng-click="toggleGroup(group)"
+                          ng-class="{active: isGroupShown(group)}">
+                    <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+                    &nbsp;
+                    {{group.name}}
+                </ion-item>
+                <div class="row responsive-lg" ng-show="isGroupShown(group)">
+                    <div class="card"><b>Address: </b>{{group.Adress}}</div>
+                    <div class="card"><b>Contact: </b>{{group.Contact}}</div>
+                    <div class="card"><b>Instruction: </b>{{group.Instruction}}</div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

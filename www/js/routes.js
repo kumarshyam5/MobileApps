@@ -36,6 +36,15 @@ angular.module("starter.routes", [])
             }
         }
     })
+    .state('app.tripsheet', {
+             url: '/tripsheet',
+             views: {
+                 'menuContent': {
+                     templateUrl: 'templates/tripsheet.html',
+                     controller: 'TripsheetController'
+                 }
+             }
+         })
     .state('unauthorized',{
         url: '/landing',
         templateUrl:'templates/landing-page.html',
