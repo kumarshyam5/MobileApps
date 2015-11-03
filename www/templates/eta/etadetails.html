@@ -21,8 +21,32 @@
                 <p>{{etaDetails.destination}}</p>
             </li>
             <li class="item">
-                <h2>ETD</h2> 
-                <p><input ng-model="etaDetails.Etddate" type="date"/></p>                         
+                <div class="card">
+                    <div class="item item-divider item-positive">
+                        ETD
+                    </div>
+
+                    <div class="row" style="margin:0px;">
+                        <div class="col col-20" style="margin:0px;">
+                            <b class=" input-label padding-bottom"><small>Date:</small></b>
+                        </div>
+
+                        <div class="col col-80" style="margin:0px;">
+                            <input class="padding-bottom" ng-model="etdDate.value" type="date" />
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="margin:0px;">
+                        <div class="col col-20" style="margin:0px;">
+                            <b class=" input-label padding-bottom"><small>Time:</small></b>
+                        </div>
+
+                        <div class="col col-80" style="margin:0px;">
+                            <p class=" input-label padding-bottom"><small>{{etdTime}}</small></p>
+                        </div>
+                    </div>
+                </div>                
             </li>
         </div>
 <!--        </div>-->
