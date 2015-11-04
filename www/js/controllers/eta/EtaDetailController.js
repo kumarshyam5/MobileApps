@@ -20,7 +20,7 @@ angular.module('etacontrollers')
         format: 'yyyy-mm-dd', // ISO formatted date
         onClose: function (e) {
             // do something when the picker closes  
-            console.log(abc);
+            
         }
     }
 
