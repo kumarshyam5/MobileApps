@@ -16,6 +16,14 @@ angular.module('etacontrollers')
 
     };
 
+    $scope.options = {
+        format: 'yyyy-mm-dd', // ISO formatted date
+        onClose: function (e) {
+            // do something when the picker closes  
+            
+        }
+    }
+
     var OnError = function (error) {
         $scope.status = 'Failed ' + error.status;
     }

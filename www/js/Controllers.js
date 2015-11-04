@@ -30,9 +30,9 @@ angular.module('starter.Controllers', [])
     };
 
     $scope.groups = [
-   { name: 'BrookHaven, MS', id: 1, Adress: 'Store', Contact: 'Test', Instruction: 'Instructions' },
-   { name: 'Mobile, AL', id: 1,  Adress: 'Store', Contact: 'Test', Instruction: 'Instructions' },
-   { name: 'Mobile, AL', id: 1, Adress: 'Store', Contact: 'Test', Instruction: 'Instructions' },
+   { name: 'BrookHaven, MS', id: 1, Adress: 'Store 4657, 6350 Cottage Hill RD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
+   { name: 'Mobile, AL', id: 1, Adress: 'Store 5098, 1970 South University BLVD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
+   { name: 'Mobile, AL', id: 1, Adress: 'Store 4657, 6350 Cottage Hill RD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
     ];
   
   
