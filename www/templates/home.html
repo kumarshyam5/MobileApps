@@ -2,33 +2,31 @@
     <ion-content padding="true">
         <div class="col" ng-if="driver!='undefined'"><h3>Welcome, {{driver.driver_name}} ({{driver.driver_id}})</h3></div>
         
-        <div class="row">
-            <div class="col" style="margin:0px">               
-                <a class="button button-block button-outline button-calm" ui-sref="app.etalists">                    
-                    <img ng-src="img/ic_menu_truck.png" >                
-                    <p><b>My ETD</b></p>
+        <div class="row" >
+            <div class="col">               
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.etalists">                    
+                    <img ng-src="img/ic_menu_truck.png" />                
+                    <p style="margin:0px;padding:0px"><b>My ETD</b></p>
                 </a> 
              </div>
-            <div class="col" style="margin:0px">                
-                <a class="button button-block button-outline button-calm" ui-sref="app.summary">
-                    <img ng-src="img/ic_menu_summary.png"  />
-                    <p><b>Summary</b></p>
+            <div class="col">                
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.summary">
+                    <img ng-src="img/ic_menu_summary.png" />
+                    <p style="margin:0px;padding:0px"><b>Summary</b></p>
                 </a>             
             </div>
         </div>
         <div class="row">
-            <div class="col" style="margin:0px">
-               <!--<div class="item item-body">-->
-                   <a class="button button-block button-outline button-calm" ui-sref="app.tripsheet">
+            <div class="col">              
+                   <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.tripsheet">
                        <img ng-src="img/ic_menu_tripsheet.png"  />
-                       <p> <b>Trip Details</b></p>
-                   </a> 
-               <!--</div>-->                                
+                       <p style="margin:0px;padding:0px"> <b>Trip Details</b></p>
+                   </a>                                          
             </div>
-            <div class="col" style="margin:0px">
-                <a class="button button-block button-outline button-calm" ui-sref="app.about">
+            <div class="col">
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.about">
                     <img ng-src="img/ic_menu_about.png"   />
-                    <p> <b>Help</b></p>
+                    <p style="margin:0px;padding:0px"> <b>About</b></p>
                 </a>
             </div>
         </div>
