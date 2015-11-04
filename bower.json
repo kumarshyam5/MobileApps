@@ -3,5 +3,8 @@
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "angular-native-datepicker": "angular-native-picker#~1.0.4"
   }
 }

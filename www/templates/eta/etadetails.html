@@ -46,44 +46,11 @@
                             <p class=" input-label padding-bottom"><small>{{etdTime}}</small></p>
                         </div>
                     </div>
-                </div>                
+                </div>  
+                <input type="text" pick-a-date="etdDate" placeholder="Select Date" pick-a-date-options="options"/>        
+                <input type="text" pick-a-time="xyc" placeholder="Select Time" pick-a-time-option="{ format: 'HH:MM'}" /> 
             </li>
         </div>
-<!--        </div>-->
-<!--
-        <div class="card">
-            <div class="item item-divider item-positive">
-                Trip Id
-            </div>
-            <div class="item item-divider">
-                {{etaDetails.trip_id}}
-            </div>
-        </div>
-        <div class="card">
-            <div class="item item-divider item-positive">
-                Origin
-            </div>
-            <div class="item item-divider">
-                {{etaDetails.Origin}}
-            </div>
-        </div>
-        <div class="card">
-            <div class="item item-divider item-positive">
-                Destination
-            </div>
-            <div class="item item-divider">
-                {{etaDetails.destination}}
-            </div>
-        </div>
-        <div class="card">
-            <div class="item item-divider item-positive">
-                ETD Date
-            </div>
-            <div class="item item-divider">
-               <input ng-model="etaDetails.Etddate" />
-            </div>
-        </div>
--->
         <button class="button button-block button-positive" ng-click="updateEta(etaDetails)">Save</button>
     </ion-content>
 
