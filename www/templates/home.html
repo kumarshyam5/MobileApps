@@ -1,33 +1,63 @@
 <ion-view view-title="Home">
     <ion-content padding="true">
         <div class="col" ng-if="driver!='undefined'"><h3>Welcome, {{driver.driver_name}} ({{driver.driver_id}})</h3></div>
+        
         <div class="row">
-            <div class="col">               
+            <div class="col" style="margin:0px">               
                 <a class="button button-block button-outline button-calm" ui-sref="app.etalists">                    
-                    <img ng-src="img/tanker_truck.png"  style="width:100%">                
-                    <b>My ETD</b>
+                    <img ng-src="img/ic_menu_truck.png" >                
+                    <p><b>My ETD</b></p>
                 </a> 
              </div>
-            <div class="col">                
+            <div class="col" style="margin:0px">                
                 <a class="button button-block button-outline button-calm" ui-sref="app.summary">
-                    <img ng-src="img/Icon-summary.png"  style="width:100%"/>
-                    <b>Summary</b>
+                    <img ng-src="img/ic_menu_summary.png"  />
+                    <p><b>Summary</b></p>
                 </a>             
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <a class="button button-block button-outline button-calm" ui-sref="app.tripsheet">
-                    <img ng-src="img/print.png" style="width:100%" />
-                    <b>Trip Details</b>
-                    </a>                  
+            <div class="col" style="margin:0px">
+               <!--<div class="item item-body">-->
+                   <a class="button button-block button-outline button-calm" ui-sref="app.tripsheet">
+                       <img ng-src="img/ic_menu_tripsheet.png"  />
+                       <p> <b>Trip Details</b></p>
+                   </a> 
+               <!--</div>-->                                
             </div>
-            <div class="col">
+            <div class="col" style="margin:0px">
                 <a class="button button-block button-outline button-calm" ui-sref="app.about">
-                    <img ng-src="img/get_info.png" style="width:100%" />
-                    <b>About</b>
+                    <img ng-src="img/ic_menu_about.png"   />
+                    <p> <b>Help</b></p>
                 </a>
             </div>
         </div>
+
+        <!--<div class="row responsive-sm">
+            <div class="list card">
+                <div class="item item-avatar">
+                    <i class="icon ion-clock"></i>
+                    <b>My ETD</b>
+                </div>
+                <div class="item item-image">
+                    <a class="button button-block button-outline button-calm" ui-sref="app.etalists">
+                        <img ng-src="img/tanker_truck.png" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="list card">
+                <div class="item item-avatar">
+                    <i class="icon ion-document-text"> </i>
+                    <b>Summary</b>
+                </div>
+                <div class="item item-image">
+                    <a class="button button-block button-outline button-calm" ui-sref="app.etalists">
+                        <img ng-src="img/Icon-summary.png" style="width:100%">
+                    </a>
+                </div>
+            </div>
+        </div>-->
+
+       
     </ion-content>
 </ion-view>
