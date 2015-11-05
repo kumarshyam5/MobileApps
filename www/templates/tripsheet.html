@@ -1,43 +1,44 @@
 ﻿<ion-view title="Trip Details">
     <ion-content padding="true" class="has-header">
         <ion-list>
-            <div ng-class="IsOneHidden? 'button icon-left ion-plus button-block button-calm button-small':'button icon-left ion-minus button-block button-calm button-small'" ng-click="ShowHide('One')">
-            <b>Details</b>
-            </div>
-            <div class="list-card" ng-hide="IsOneHidden">
-                <div class="row">
-                    <div class="col col-50 button-small">
-                        <b>Trip: </b>59717889
+            <div style="text-align:left" ng-class="IsOneHidden? 'button icon-left ion-plus button-block button-calm button-small':'button icon-left ion-minus button-block button-calm button-small'" ng-click="ShowHide('One')">
+                <b>Details</b>
+                <div style="background-color:white" ng-hide="IsOneHidden">
+                    <div class="row">
+                        <div class="col col-50 button-small" style="color:black; text-align:left" >
+                            <b>Trip: </b>768765657
+                        </div>
+                        <div class="col col-50 button-small" style="color:black; text-align:left"><b>Trailor: </b></div>
                     </div>
-                    <div class="col col-50 button-small"><b>Trailor: </b></div>
-                    </div>
-                <div class="row">
-                    <div class="col button-small">
-                        <b>Must Depart Time: </b>02-29-2012 04:00 CT
+                    <div class="row">
+                        <div class="col button-small" style="color:black; text-align:left">
+                            <b>Must Depart Time: </b>08-29-2015 04:00 CT
+                        </div>
                     </div>
                 </div>
-            </div>            
+            </div>           
         </ion-list>
         <ion-list>
-            <div ng-class="IsTwoHidden? 'button icon-left ion-plus button-block button-calm button-small':'button icon-left ion-minus button-block button-calm button-small'" ng-click="ShowHide('Two')">
+            <div style="text-align:left" ng-class="IsTwoHidden? 'button icon-left ion-plus button-block button-calm button-small':'button icon-left ion-minus button-block button-calm button-small'" ng-click="ShowHide('Two')">
                 <b>Movements</b>
-            </div>            
-            <div ng-hide="IsTwoHidden">
-                <div ng-repeat="group in groups">
-                    <ion-item class="item-stable button-small"
-                              ng-click="toggleGroup(group)"
-                              ng-class="{active: isGroupShown(group)}">
-                        <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
-                        &nbsp;
-                        {{group.name}}
-                    </ion-item>
-                    <div class="list" ng-show="isGroupShown(group)">                       
-                        <div class="item button-small"><b>Address: </b>{{group.Adress}}</div>
-                        <div class="item button-small"><b>Contact: </b>{{group.Contact}}</div>
-                        <div class="item button-small"><b>Instruction: </b>{{group.Instruction}}</div>
+                <div ng-hide="IsTwoHidden">
+                    <div ng-repeat="group in groups">
+                        <ion-item class="item-stable button-small"
+                                  ng-click="toggleGroup(group)"
+                                  ng-class="{active: isGroupShown(group)}">
+                            <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+                            &nbsp;
+                            {{group.name}}
+                        </ion-item>
+                        <div class="list" ng-show="isGroupShown(group)">
+                            <div class="item button-small"><b>Address: </b>{{group.Adress}}</div>
+                            <div class="item button-small"><b>Contact: </b>{{group.Contact}}</div>
+                            <div class="item button-small"><b>Instruction: </b>{{group.Instruction}}</div>
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
+             
 </ion-list>
     </ion-content>
 </ion-view>

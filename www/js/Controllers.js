@@ -46,6 +46,7 @@ angular.module('starter.Controllers', [])
         } else {
             $scope.shownGroup = group;
         }
+        $scope.IsTwoHidden = true;
     };
     $scope.isGroupShown = function(group) {
         return $scope.shownGroup === group;
