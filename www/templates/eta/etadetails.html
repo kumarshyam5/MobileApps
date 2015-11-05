@@ -25,30 +25,20 @@
                     <div class="item item-divider item-positive">
                         ETD
                     </div>
+                    <div></div>
+                        <ionic-datepicker input-obj="datepickerObject">
+                            <button class="button button-full button-stable overflowShow"> Date: {{datepickerObject.inputDate | date:'dd-MMMM-yyyy'}}</button>
+                        </ionic-datepicker>
+                        <ionic-timepicker input-obj="timePickerObject">
+                            <button class="button button-full button-stable overflowShow">
+                                Time: <standard-time-meridian etime="timePickerObject.inputEpochTime"></standard-time-meridian>
 
-                    <div class="row" style="margin:0px;">
-                        <div class="col col-20" style="margin:0px;">
-                            <b class=" input-label padding-bottom"><small>Date:</small></b>
-                        </div>
-
-                        <div class="col col-80" style="margin:0px;">
-                            <input class="padding-bottom" ng-model="etdDate.value" type="date" />
-                        </div>
-
-                    </div>
-
-                    <div class="row" style="margin:0px;">
-                        <div class="col col-20" style="margin:0px;">
-                            <b class=" input-label padding-bottom"><small>Time:</small></b>
-                        </div>
-
-                        <div class="col col-80" style="margin:0px;">
-                            <p class=" input-label padding-bottom"><small>{{etdTime}}</small></p>
-                        </div>
-                    </div>
+                            </button>
+                        </ionic-timepicker>
                 </div>  
-                <input type="text" pick-a-date="abc" placeholder="Select Date" pick-a-date-options="options"/>        
-                <input type="text" pick-a-time="xyc" placeholder="Select Time" pick-a-time-option="{ format: 'HH:MM'}" /> 
+                <!--<input type="text" pick-a-date="etatempdate" placeholder="Select Date" pick-a-date-options="options"/>       
+                <input type="text" pick-a-time="xyc" placeholder="Select Time" pick-a-time-option="{ format: 'HH:MM'}" />--> 
+                
             </li>
         </div>
         <button class="button button-block button-positive" ng-click="updateEta(etaDetails)">Save</button>
