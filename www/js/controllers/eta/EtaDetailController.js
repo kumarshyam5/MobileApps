@@ -4,13 +4,12 @@ angular.module('etacontrollers')
     var etaId = $stateParams.id;
 
     $scope.datepickerObject = {
-        titleLabel: 'Title',  //Optional
         todayLabel: 'Today',  //Optional
         closeLabel: 'Close',  //Optional
         setLabel: 'Set',  //Optional
-        setButtonType: 'button-assertive',  //Optional
-        todayButtonType: 'button-assertive',  //Optional
-        closeButtonType: 'button-assertive',  //Optional
+        setButtonType: 'button-positive',  //Optional
+        todayButtonType: 'button-stable',  //Optional
+        closeButtonType: 'button-stable',  //Optional
         inputDate: new Date(),  //Optional
         mondayFirst: true,  //Optional
         templateType: 'popup', //Optional
@@ -19,7 +18,7 @@ angular.module('etacontrollers')
         callback: function (val) {  //Mandatory
             datePickerCallback(val);
         },
-            dateFormat: 'dd-MM-yyyy', //Optional
+            dateFormat: 'dd-MMM-yyyy', //Optional
         closeOnSelect: false, //Optional
     };
 
@@ -28,7 +27,6 @@ angular.module('etacontrollers')
             console.log('No date selected');
         } else {
             $scope.datepickerObject.inputDate = val;
-            console.log('Selected date is : ', val)
         }
     };
 
@@ -77,14 +75,14 @@ angular.module('etacontrollers')
     var OnUpdateFailure = function (error) {
         $scope.status = 'Failed ' + error.status;
     };
+
     $scope.updateEta = function (etaDetails) {
         var etdDate = new Date( $scope.datepickerObject.inputDate);
         var etdTime = $scope.timePickerObject.inputEpochTime;
         var selectedTime = new Date(etdTime * 1000);
-        
-        var etdSaveDate = new Date(etdDate.getFullYear(), etdDate.getMonth(), etdDate.getDate(), selectedTime.getUTCHours(), selectedTime.getUTCMinutes(), 0, 0);
-        etaDetails.Etddate = etdSaveDate;
-        console.log("Before Saving "+ etaDetails)
+        var etdSavingDate = etdDate.getFullYear().toString() + "/" + (etdDate.getMonth() + 1).toString() + "/" + etdDate.getDate().toString() + " " + selectedTime.getUTCHours().toString() + ":" + selectedTime.getUTCMinutes().toString()
+
+        etaDetails.Etddate = etdSavingDate;
         $etaServices.updateEta(etaDetails)
          .then(OnUpdatecompleted, OnUpdateFailure);
     };

@@ -21,21 +21,16 @@
                 <p>{{etaDetails.destination}}</p>
             </li>
             <li class="item">
-                <div class="card">
-                    <div class="item item-divider item-positive">
-                        ETD
-                    </div>
-                    <div></div>
-                        <ionic-datepicker input-obj="datepickerObject">
-                            <button class="button button-full button-stable overflowShow"> Date: {{datepickerObject.inputDate | date:'dd-MMMM-yyyy'}}</button>
-                        </ionic-datepicker>
-                        <ionic-timepicker input-obj="timePickerObject">
-                            <button class="button button-full button-stable overflowShow">
-                                Time: <standard-time-meridian etime="timePickerObject.inputEpochTime"></standard-time-meridian>
+                <h2>ETD</h2> 
+                <ionic-datepicker input-obj="datepickerObject">
+                    <button class="button button-stable overflowShow"> {{datepickerObject.inputDate | date:'MM-dd-yyyy'}}</button>
+                </ionic-datepicker>
+                <ionic-timepicker input-obj="timePickerObject">
+                    <button class="button button-stable overflowShow">
+                        <standard-time-meridian etime="timePickerObject.inputEpochTime"></standard-time-meridian>
 
-                            </button>
-                        </ionic-timepicker>
-                </div>  
+                    </button>
+                </ionic-timepicker> 
                 <!--<input type="text" pick-a-date="etatempdate" placeholder="Select Date" pick-a-date-options="options"/>       
                 <input type="text" pick-a-time="xyc" placeholder="Select Time" pick-a-time-option="{ format: 'HH:MM'}" />--> 
                 
