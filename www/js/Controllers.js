@@ -53,10 +53,28 @@ angular.module('starter.Controllers', [])
     }; 
 
 })
-.controller('SummaryController', function ($scope) {
+.controller('SummaryController', ['$scope','etaServices',function ($scope,$etaServices) {
 
+    var etaList = [];
+    $etaServices.getEtaList()
+    .then(function successCallback(response) {
+       etaList = response.data;
+        console.log(etaList);
+        $scope.totalTrips = etaList.length;
+        $scope.etaList = etaList;
+//        angular.forEach(etaList, function(value, index){ 
+//            
+//            $scope.tripIds='';
+//            if(index!=0){
+//                $scope.tripIds.push(value.trip_id);
+//            
+//            }            
+//        });
+    });
+    
+    
 
-})
+}])
 .controller('AboutController', function ($scope) {
 
 

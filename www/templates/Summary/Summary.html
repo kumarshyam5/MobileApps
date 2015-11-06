@@ -1,6 +1,21 @@
-﻿<ion-view title="Summary">
+<ion-view title="Summary">
 
     <ion-content padding="true" class="has-header">
-        <h1>under construction</h1>
+        <div class="list card">
+            <div class="item item-divider">Trip Summary</div>
+            <div class="item item-text-wrap">Current Trip: {{etaList[0].trip_id}}</div>
+            <div class="item item-text-wrap>">Pending trips: {{etaList.length-1}}</div>
+        </div>
+        <div class="list card positive">
+            <div class="item item-divider">ETD Summary</div>
+            <div class="item item-text-wrap">
+                <b>Earliest ETD :</b> {{etaList[0].Etddate}}<br/>
+                <b>Trip ID      :</b> {{etaList[0].trip_id}}
+            </div>
+            <div class="item item-text-wrap">
+                <b>Final ETD :</b> {{etaList[etaList.length-1].Etddate}}<br/>
+                <b>Trip ID :</b> {{etaList[etaList.length-1].Etddate}}
+            </div>
+        </div>
     </ion-content>
 </ion-view>
