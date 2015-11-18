@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+.platform-ios . bar-custom{
+    background-color: none;
+    color: black;
+}
+
+.platform-android . bar-custom{
+    background-color: cornflowerblue;
+    color: white;
+}

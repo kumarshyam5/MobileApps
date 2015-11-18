@@ -1,6 +1,61 @@
 <ion-view view-title="Home">
-<ion-content padding="true">
-<h4>Welcome to WTMS Mobile App</h4>
-    <h5>This is done for a demo purpose.</h5>
-</ion-content>
+    <ion-content padding="true">
+        <div class="col" ng-if="driver!='undefined'"><h3>Welcome, {{driver.driver_name}} ({{driver.driver_id}})</h3></div>
+        
+        <div class="row" >
+            <div class="col">               
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.etalists">                    
+                    <img ng-src="img/ic_menu_truck.png" />                
+                    <p style="margin:0px;padding:0px"><b>My ETD</b></p>
+                </a> 
+             </div>
+            <div class="col">                
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.summary">
+                    <img ng-src="img/ic_menu_summary.png" />
+                    <p style="margin:0px;padding:0px"><b>Summary</b></p>
+                </a>             
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">              
+                   <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.tripsheet">
+                       <img ng-src="img/ic_menu_tripsheet.png"  />
+                       <p style="margin:0px;padding:0px"> <b>Trip Details</b></p>
+                   </a>                                          
+            </div>
+            <div class="col">
+                <a class="button button-block button-outline button-calm" style="margin:0px;padding:0px" ui-sref="app.about">
+                    <img ng-src="img/ic_menu_about.png"   />
+                    <p style="margin:0px;padding:0px"> <b>About</b></p>
+                </a>
+            </div>
+        </div>
+
+        <!--<div class="row responsive-sm">
+            <div class="list card">
+                <div class="item item-avatar">
+                    <i class="icon ion-clock"></i>
+                    <b>My ETD</b>
+                </div>
+                <div class="item item-image">
+                    <a class="button button-block button-outline button-calm" ui-sref="app.etalists">
+                        <img ng-src="img/tanker_truck.png" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="list card">
+                <div class="item item-avatar">
+                    <i class="icon ion-document-text"> </i>
+                    <b>Summary</b>
+                </div>
+                <div class="item item-image">
+                    <a class="button button-block button-outline button-calm" ui-sref="app.etalists">
+                        <img ng-src="img/Icon-summary.png" style="width:100%">
+                    </a>
+                </div>
+            </div>
+        </div>-->
+
+       
+    </ion-content>
 </ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="My ETD" cache-view="false" >
+    
+        <ion-content padding="true">
+<!--            <h3 class="title">{{driver.driver_id}}, {{driver.driver_name}}</h3>-->
+            
+            <div class="list">
+                
+                        <a class="item item-avatar" ui-sref="app.eta({id:item.Etd_id})" ng-repeat="item in etaList">
+                            <img ng-src="{{item.imgSrc}}" />
+                            <h2>Trip Id: {{item.trip_id}}</h2>
+                            <p>Date: {{item.Etddate}}</p>
+                        </a>
+                    
+            </div>
+        </ion-content>
+    
+</ion-view>

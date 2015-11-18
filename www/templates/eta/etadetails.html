@@ -1,0 +1,42 @@
+<ion-view title="ETD Details">
+
+
+    <ion-content padding="true" class="has-header">
+<!--
+        <div class="card">
+            <div class="item item-divider item-calm">
+                Trip Information
+            </div>
+-->
+        <div class="list card">
+            <li class="item">
+                <h2>Trip Id</h2> {{etaDetails.trip_id}}
+            </li>
+            <li class="item">
+                <h2>Origin</h2> 
+                <p>{{etaDetails.Origin}}</p>
+            </li>
+            <li class="item">
+                <h2>Destination</h2> 
+                <p>{{etaDetails.destination}}</p>
+            </li>
+            <li class="item">
+                <h2>ETD</h2> 
+                <ionic-datepicker input-obj="datepickerObject">
+                    <button class="button button-stable overflowShow"> {{datepickerObject.inputDate | date:'MM-dd-yyyy'}}</button>
+                </ionic-datepicker>
+                <ionic-timepicker input-obj="timePickerObject">
+                    <button class="button button-stable overflowShow">
+                        <standard-time-meridian etime="timePickerObject.inputEpochTime"></standard-time-meridian>
+
+                    </button>
+                </ionic-timepicker> 
+                <!--<input type="text" pick-a-date="etatempdate" placeholder="Select Date" pick-a-date-options="options"/>       
+                <input type="text" pick-a-time="xyc" placeholder="Select Time" pick-a-time-option="{ format: 'HH:MM'}" />--> 
+                
+            </li>
+        </div>
+        <button class="button button-block button-positive" ng-click="updateEta(etaDetails)">Save</button>
+    </ion-content>
+
+</ion-view>

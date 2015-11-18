@@ -1,67 +1,82 @@
 
 angular.module('starter.Controllers', [])
 
-.controller('EtaListController', function ($scope) {
+.controller('HomeController', ['$scope', 'etaServices', '$ionicPopup', '$state', '$rootScope',
+    function ($scope, $etaServices, $ionicPopup, $state, $rootScope) {
+        
+    $etaServices.gerDriver()
+     .then(function successCallback(response) {
+         $scope.driver = response.data;
+        console.log($scope.driver);
+     },function errorCallback(error){
+        console.log($scope.driver);
+    });
+    }])
+.controller('TripsheetController',function($scope)
+{
+    //This will hide the DIV by default.
+    $scope.IsOneHidden = true;
+    $scope.IsTwoHidden=true;
+    $scope.ShowHide = function (value) {
+        //If DIV is hidden it will be visible and vice versa.
+        if (value == 'One') {
+            $scope.IsOneHidden = $scope.IsOneHidden ? false : true;
+            $scope.IsTwoHidden = true;
+        }
+        else if (value == 'Two') {
+            $scope.IsTwoHidden = $scope.IsTwoHidden ? false : true;
+            $scope.IsOneHidden = true;
+        }
+    };
 
-    $scope.DriverName = "John Smith";
-    $scope.DriverId = 3456;
+    $scope.groups = [
+   { name: 'BrookHaven, MS', id: 1, Adress: 'Store 4657, 6350 Cottage Hill RD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
+   { name: 'Mobile, AL', id: 1, Adress: 'Store 5098, 1970 South University BLVD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
+   { name: 'Mobile, AL', id: 1, Adress: 'Store 4657, 6350 Cottage Hill RD', Contact: 'Susan Clinton @251-661-1717', Instruction: 'HWY 98 To Schillinger Road South' },
+    ];
+  
+  
+    /*
+     * if given group is the selected group, deselect it
+     * else, select the given group
+     */
+    $scope.toggleGroup = function(group) {
+        if ($scope.isGroupShown(group)) {
+            $scope.shownGroup = null;
+        } else {
+            $scope.shownGroup = group;
+        }
+        $scope.IsTwoHidden = true;
+    };
+    $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+    }; 
 
-    $scope.EtaList = [{
-        ETD: 'Current ETD',
-        Date: '10/24/2015 14:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 11:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }, {
-        ETD: 'Next ETD',
-        Date: '10/25/2015 18:00'
-    }]
-
-    $scope.etaDetails = [{
-        tripId:'63455432',
-        location:'DC 6094, Bentonville',
-        eta:'10/25/2015 18:00'
-    },
-    {
-        tripId:'63455432',
-        location:'STORE 100, Bentonville',
-        eta:'10/25/2015 18:30'
-    },
-                        {
-        tripId:'63455432',
-        location:'STORE 1, Rogers',
-        eta:'10/25/2015 19:00'
-    }]
 })
-.controller('NavController',function($scope,$stateParams){
+.controller('SummaryController', ['$scope','etaServices',function ($scope,$etaServices) {
+
+    var etaList = [];
+    $etaServices.getEtaList()
+    .then(function successCallback(response) {
+       etaList = response.data;
+        console.log(etaList);
+        $scope.totalTrips = etaList.length;
+        $scope.etaList = etaList;
+//        angular.forEach(etaList, function(value, index){ 
+//            
+//            $scope.tripIds='';
+//            if(index!=0){
+//                $scope.tripIds.push(value.trip_id);
+//            
+//            }            
+//        });
+    });
+    
+    
+
+}])
+.controller('AboutController', function ($scope) {
+
+
 });
+
