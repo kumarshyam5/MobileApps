@@ -4,7 +4,7 @@ angular.module('etacontrollers')
     $etaServices.getEtaList()
     .then(function successCallback(response) {
         $scope.etaList=[];
-        console.log(response.data);
+        //console.log(response.data);
         angular.forEach(response.data, function(value, index) {
             if(index==0)
                 value["imgSrc"]="img/current.png";
@@ -13,7 +13,7 @@ angular.module('etacontrollers')
             $scope.etaList.push(value);
         });
 
-        console.log($scope.etaList);
+       // console.log($scope.etaList);
         
     },
           function errorCallback( error) {
